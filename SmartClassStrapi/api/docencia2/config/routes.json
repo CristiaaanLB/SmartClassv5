@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/docencia-2-s",
+      "handler": "docencia2.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/docencia-2-s/count",
+      "handler": "docencia2.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/docencia-2-s/:id",
+      "handler": "docencia2.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/docencia-2-s",
+      "handler": "docencia2.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/docencia-2-s/:id",
+      "handler": "docencia2.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/docencia-2-s/:id",
+      "handler": "docencia2.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "Docencia2",
+  "info": {
+    "name": "Docencia2"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "classroom": {
+      "type": "string"
+    },
+    "temperature": {
+      "type": "decimal"
+    },
+    "RH": {
+      "type": "integer"
+    },
+    "doorStatus": {
+      "type": "integer"
+    },
+    "noiseLevel": {
+      "type": "integer"
+    },
+    "timestamp": {
+      "type": "datetime"
+    }
+  }
+}
