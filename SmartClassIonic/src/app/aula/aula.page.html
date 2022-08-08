@@ -9,4 +9,59 @@
 
 <ion-content>
 
+  <ion-card class="ion-text-center">
+    <ion-card-title>
+      <h5>Datos en tiempo real:</h5>
+    </ion-card-title>
+  </ion-card>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <ion-card id="ruido">
+          <ion-card-header class="ion-text-center">
+            <ion-card-title>Ruido:</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="../../assets/image/semaforoAmarillo.png">
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6">
+        <ion-card id="puerta">
+          <ion-card-header class="ion-text-center">
+            <ion-card-title>Puerta:</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="../../assets/image/puertaAbierta.png">
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-card>
+    <ion-card-header class="ion-text-center">
+      <ion-card-title>Temperatura:</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      *gráfica*
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header class="ion-text-center">
+      <ion-card-title>Humedad relativa:</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      *gráfica*
+    </ion-card-content>
+  </ion-card>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="dark">
+      <ion-icon name="time-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  
 </ion-content>
