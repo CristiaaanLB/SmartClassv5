@@ -1,0 +1,16 @@
+#fecha{
+    display: flex;
+    justify-content: space-between;
+}
+
+#puerta, #ruido{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#derecha, #temperatura, #humedad{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
