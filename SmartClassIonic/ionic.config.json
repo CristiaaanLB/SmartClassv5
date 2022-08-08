@@ -1,0 +1,7 @@
+{
+  "name": "SmartClassIonic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

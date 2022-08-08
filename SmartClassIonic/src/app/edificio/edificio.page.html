@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button (click)="goBack()"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ titulo }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content id="content">
+  <div id="svgCard">
+    <svg id="svg">
+    </svg>
+  </div>
+
+  <ion-card class="ion-text-center">
+    <ion-card-title>
+      <h5>Seleccione un salón:</h5>
+    </ion-card-title>
+  </ion-card>
+
+  <ion-grid>
+    <ion-row *ngFor="let boton of botones">
+      <ion-col>
+        <ion-button expand="block" color="dark" fill="outline" routerLink="/aula/{{ boton.salonizq }}">
+          {{ boton.salonizq }}
+        </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button expand="block" color="dark" fill="outline" routerLink="/aula/{{ boton.salonder }}">
+          {{ boton.salonder }}
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- <ion-grid>
+    <ion-col size="6">
+      <ion-row *ngFor="let botonizq of botonesizq">
+        <ion-button routerLink="/aula/{{ botonizq.name }}">
+          Salon {{ botonizq.name }}
+        </ion-button>
+      </ion-row>
+    </ion-col>
+    <ion-col size="6">
+      <ion-row *ngFor="let botonder of botonesder">
+        <ion-button routerLink="/aula/{{ botonder.name }}">
+          Salon {{ botonder.name }}
+        </ion-button>
+      </ion-row>
+    </ion-col>
+  </ion-grid> -->
+
+  <!-- <li *ngFor="let boton of botones">
+    <ion-button routerLink="/aula/{{ boton.name }}">
+      Salon {{ boton.name }}
+    </ion-button>
+  </li> -->
+
+</ion-content>
