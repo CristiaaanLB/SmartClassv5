@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'aula',
     loadChildren: () => import('./aula/aula.module').then( m => m.AulaPageModule)
   },
+  {
+    path: 'historial',
+    loadChildren: () => import('./historial/historial.module').then( m => m.HistorialPageModule)
+  },
 ];
 
 @NgModule({

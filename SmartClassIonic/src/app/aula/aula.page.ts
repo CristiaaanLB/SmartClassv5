@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IonRouterOutlet } from '@ionic/angular';
-import { Router, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-aula',
@@ -11,7 +12,12 @@ export class AulaPage implements OnInit {
 
   id;
 
-  constructor(private routerOutlet: IonRouterOutlet, private route: ActivatedRoute) { }
+  constructor(private routerOutlet: IonRouterOutlet, private route: ActivatedRoute, private router: Router) { }
+
+  goToHistory(){
+    console.log("Loading history...");
+    this.router.navigate(['historial/'+this.id]);
+  }
 
   goBack() {
     this.routerOutlet.pop();
