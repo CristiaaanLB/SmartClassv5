@@ -26,11 +26,6 @@ export class EdificioPage implements OnInit {
     this.routerOutlet.pop();
   }
 
-  goToBuilding(building, level){
-    console.log("Loading "+building+"...");
-    this.router.navigate(['edificio/'+building, level]);
-  }
-
   ngOnInit() {
   }
 

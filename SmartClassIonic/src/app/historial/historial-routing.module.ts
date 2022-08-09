@@ -9,7 +9,7 @@ const routes: Routes = [
     component: HistorialPage
   },
   {
-    path: ":id",
+    path: ":edificio/:id",
     component: HistorialPage
   },
 ];

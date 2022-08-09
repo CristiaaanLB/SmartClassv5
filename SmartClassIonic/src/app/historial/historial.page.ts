@@ -10,10 +10,10 @@ import { LecturasService } from "../tools/lecturas.service";
 })
 export class HistorialPage implements OnInit {
 
+  edificio;
   id;
   titulo;
   lecturas: any = [
-
   ];
 
   constructor(private routerOutlet: IonRouterOutlet, private route: ActivatedRoute, private lecturasService: LecturasService) { }
@@ -28,12 +28,14 @@ export class HistorialPage implements OnInit {
 
   ionViewWillEnter(){
     this.route.paramMap.subscribe(params => {
+      this.edificio = params.get('edificio');
       this.id = params.get('id');
     });
 
+    console.log(this.edificio);
     console.log(this.id);
 
-    this.lecturasService.getHistoryByClassroom(this.id).subscribe(
+    this.lecturasService.getHistoryByClassroom(this.id, this.edificio).subscribe(
       res => {
         console.log(res);
         this.lecturas = res;

@@ -23,12 +23,12 @@
   <ion-grid>
     <ion-row *ngFor="let boton of botones">
       <ion-col>
-        <ion-button expand="block" color="dark" fill="outline" routerLink="/aula/{{ boton.salonizq }}">
+        <ion-button expand="block" color="dark" fill="outline" routerLink="/aula/{{ boton.edificio }}/{{ boton.salonizq }}">
           {{ boton.salonizq }}
         </ion-button>
       </ion-col>
       <ion-col>
-        <ion-button expand="block" color="dark" fill="outline" routerLink="/aula/{{ boton.salonder }}">
+        <ion-button expand="block" color="dark" fill="outline" routerLink="/aula/{{ boton.edificio }}/{{ boton.salonizq }}">
           {{ boton.salonder }}
         </ion-button>
       </ion-col>

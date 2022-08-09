@@ -9,7 +9,7 @@ const routes: Routes = [
     component: AulaPage
   },
   {
-    path: ":id",
+    path: ":edificio/:id",
     component: AulaPage
   },
 ];
