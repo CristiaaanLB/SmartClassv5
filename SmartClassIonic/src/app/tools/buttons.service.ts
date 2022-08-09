@@ -47,3 +47,9 @@ export const botonesDocencia3PB: any = [
   {salonizq: "Taller 1", salonder: "Salon 3", edificio: "Docencia 3"},
   {salonizq: "Salon 1", salonder: "Salon 2", edificio: "Docencia 3"}
 ]
+
+export const botonesDocencia4PA: any = [
+  {salonizq: "Salon 1", salonder: "Salon 2", edificio: "Docencia 4"},
+  {salonizq: "Salon 3", salonder: "Salon 4", edificio: "Docencia 4"},
+  {salonizq: "Taller 1", salonder: "Taller 2", edificio: "Docencia 4"}
+]

@@ -4,7 +4,7 @@ import { Platform } from '@ionic/angular';
 import { IonRouterOutlet } from '@ionic/angular';
 import {divSize} from "../tools/blueprints.service";
 import { DrawService } from "../tools/draw.service";
-import { botonesDocencia1PB, botonesDocencia1PA, botonesDocencia2PB, botonesDocencia2PA, botonesDocencia3PB } from '../tools/buttons.service';
+import { botonesDocencia4PA, botonesDocencia1PB, botonesDocencia1PA, botonesDocencia2PB, botonesDocencia2PA, botonesDocencia3PB } from '../tools/buttons.service';
 
 @Component({
   selector: 'app-edificio',
@@ -69,8 +69,8 @@ export class EdificioPage implements OnInit {
         this.botones = botonesDocencia3PB;
         break;
       case 'Docencia 4PB':
-        console.log('Cargando SVG de Docencia 4 PB');
-        break;
+        DrawService.Docencia3PB(width);
+        this.botones = botonesDocencia3PB;
       case "Docencia 5PB":
         console.log("Cargando SVG de Docencia 5 PB");
         break;
@@ -83,10 +83,12 @@ export class EdificioPage implements OnInit {
         this.botones = botonesDocencia2PA;
         break;
       case 'Docencia 3PA':
-        console.log('Cargando SVG de Docencia 3 PA');
+        DrawService.Docencia2PA(width);
+        this.botones = botonesDocencia2PA;
         break;
       case 'Docencia 4PA':
-        console.log('Cargando SVG de Docencia 4 PA');
+        DrawService.Docencia4PA(width);
+        this.botones = botonesDocencia4PA;
         break;
       case "Docencia 5PA":
         console.log("Cargando SVG de Docencia 5 PA");

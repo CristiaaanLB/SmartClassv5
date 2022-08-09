@@ -5410,4 +5410,310 @@ export class DrawService {
       }
     });
   }
+
+  static Docencia4PA(width){
+    //Draw walls
+    Walls.draw("svg", {
+      id: "Edificio",
+      position: {
+          x: 0,
+          y: 0
+      },
+      size: {
+          width: 27,
+          length: 51
+      },
+      style: {
+          color: "black",
+          backgroundColor: "white"
+      },
+      platform: {
+        width: width
+      }
+  });
+  Walls.draw("svg", {
+      id: "Salón362",
+      position: {
+          x: 15,
+          y: 0
+      },
+      size: {
+          width: 12,
+          length: 5.9
+      },
+      style: {
+          color: "black",
+          backgroundColor: "white"
+      },
+      platform: {
+        width: width
+      }
+  });
+
+  Walls.draw("svg", {
+      id: "Salón363",
+      position: {
+          x: 15,
+          y: 5.6
+      },
+      size: {
+          width: 12,
+          length: 5.9
+      },
+      style: {
+          color: "black",
+          backgroundColor: "white"
+      },
+      platform: {
+        width: width
+      }
+  });
+
+  Walls.draw("svg", {
+      id: "Salón364",
+      position: {
+          x: 15,
+          y: 10.8
+      },
+      size: {
+          width: 12,
+          length: 5.9
+      },
+      style: {
+          color: "black",
+          backgroundColor: "white"
+      },
+      platform: {
+        width: width
+      }
+  });
+
+  Walls.draw("svg", {
+      id: "Salón365",
+      position: {
+          x: 15,
+          y: 16.5
+      },
+      size: {
+          width: 12,
+          length: 5.9
+      },
+      style: {
+          color: "black",
+          backgroundColor: "white"
+      },
+      platform: {
+        width: width
+      }
+  });
+
+  Walls.draw("svg", {
+      id: "Salón366",
+      position: {
+          x: 15,
+          y: 22.1
+      },
+      size: {
+          width: 12,
+          length: 5.9
+      },
+      style: {
+          color: "black",
+          backgroundColor: "white"
+      },
+      platform: {
+        width: width
+      }
+  });
+
+  Walls.draw("svg", {
+      id: "EspacioGrande",
+      position: {
+          x: 16,
+          y: 39.9
+      },
+      size: {
+          width: 11,
+          length: 11
+      },
+      style: {
+          color: "black",
+          backgroundColor: "white"
+      },
+      platform: {
+        width: width
+      }
+  });
+
+  Walls.draw("svg", {
+      id: "Sala1",
+      position: {
+          x: 18,
+          y: 27.7
+      },
+      size: {
+          width: 9,
+          length: 12.4
+      },
+      style: {
+          color: "black",
+          backgroundColor: "white"
+      },
+      platform: {
+        width: width
+      }
+  });
+
+  Door.draw("svg", {
+      id: "puerta1",
+      position: {
+          x: 15,
+          y: 2
+      },
+      length: 2.8,
+      style: {
+          color: "black",
+          backgroundColor: "white"
+      },
+      orientation: {
+          facing: "east",
+      },
+      platform: {
+        width: width
+      }
+  });
+
+  Door.draw("svg", {
+      id: "puerta2",
+      position: {
+          x: 15,
+          y: 6.2
+      },
+      length: 2.8,
+      style: {
+          color: "black",
+          backgroundColor: "white"
+      },
+      orientation: {
+          facing: "east",
+      },
+      platform: {
+        width: width
+      }
+  });
+
+  Door.draw("svg", {
+      id: "puerta3",
+      position: {
+          x: 15,
+          y: 11.4
+      },
+      length: 2.8,
+      style: {
+          color: "black",
+          backgroundColor: "white"
+      },
+      orientation: {
+          facing: "east",
+      },
+      platform: {
+        width: width
+      }
+  });
+
+  Door.draw("svg", {
+      id: "puerta4",
+      position: {
+          x: 15,
+          y: 19
+      },
+      length: 2.8,
+      style: {
+          color: "black",
+          backgroundColor: "white"
+      },
+      orientation: {
+          facing: "east",
+      },
+      platform: {
+        width: width
+      }
+  });
+
+  Door.draw("svg", {
+      id: "puerta5",
+      position: {
+          x: 15,
+          y: 24.6
+      },
+      length: 2.8,
+      style: {
+          color: "black",
+          backgroundColor: "white"
+      },
+      orientation: {
+          facing: "east",
+      },
+      platform: {
+        width: width
+      }
+  });
+
+  Door.draw("svg", {
+      id: "puerta6",
+      position: {
+          x: 18,
+          y: 30.1
+      },
+      length: 2,
+      style: {
+          color: "black",
+          backgroundColor: "white"
+      },
+      orientation: {
+          facing: "east",
+      },
+      platform: {
+        width: width
+      }
+  });
+
+  Door.draw("svg", {
+      id: "puerta7",
+      position: {
+          x: 18,
+          y: 35
+      },
+      length: 2,
+      style: {
+          color: "black",
+          backgroundColor: "white"
+      },
+      orientation: {
+          facing: "east",
+      },
+      platform: {
+        width: width
+      }
+  });
+
+  Door.draw("svg", {
+      id: "puerta8",
+      position: {
+          x: 15.9,
+          y: 41.5
+      },
+      length: 2.8,
+      style: {
+          color: "black",
+          backgroundColor: "white"
+      },
+      orientation: {
+          facing: "east",
+      },
+      platform: {
+        width: width
+      }
+  });
+  }
 }

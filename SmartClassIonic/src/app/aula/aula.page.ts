@@ -37,6 +37,8 @@ export class AulaPage implements OnInit {
     this.drawTemperatureChart();
 
     this.drawHumidityChart();
+
+    //setInterval("location.reload()",5000)
   }
 
   drawTemperatureChart(){
@@ -58,7 +60,7 @@ export class AulaPage implements OnInit {
           return elem.temperature});
           //timestamp
         var timestamp = data.map(function(elem){
-          return elem.timestamp.substr(11,8)});
+          return String(new Date(elem.timestamp)).substring(15, 24)});
           
       }//if
 
@@ -125,7 +127,7 @@ export class AulaPage implements OnInit {
           return elem.RH});
           //timestamp
         var timestamp = data.map(function(elem){
-          return elem.timestamp.substr(11,8)});
+          return String(new Date(elem.timestamp)).substring(15, 24)});
           
       }//if
 
@@ -141,7 +143,7 @@ export class AulaPage implements OnInit {
       data: {
           labels: timestamp,
           datasets: [{
-              label: 'Temperatura',
+              label: 'Humedad relativa',
               data: RH,
               backgroundColor: [
                   'rgba(255, 99, 132, 0.2)',
