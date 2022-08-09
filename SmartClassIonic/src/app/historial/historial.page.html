@@ -15,7 +15,44 @@
     </ion-card-title>
   </ion-card>
 
-  <ion-card class="ion-text-center">
+  <ion-card class="ion-text-center" *ngFor="let lectura of lecturas">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12">
+          <ion-card-header id="fecha">
+            <ion-text>Fecha: {{ lectura.timestamp | date:'fullDate'}}</ion-text>
+            <ion-text>Hora: {{ lectura.timestamp | date:'mediumTime'}}</ion-text>
+          </ion-card-header>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6">
+          <ion-row>
+            <ion-col id="ruido">
+              <ion-card-subtitle>Ruido:</ion-card-subtitle>
+              <img [src]=" lectura.noiseLevel == 0 ? '../../assets/image/semaforoVerde.png' : lectura.noiseLevel == 1 ? '../../assets/image/semaforoAmarillo.png' : '../../assets/image/semaforoRojo.png'">
+            </ion-col>
+            <ion-col id="puerta">
+              <ion-card-subtitle>Puerta:</ion-card-subtitle>
+              <img [src]="lectura.doorStatus == 0 ? '../../assets/image/puertaAbierta.png' : '../../assets/image/puertaCerrada.png'">
+            </ion-col>
+          </ion-row>
+        </ion-col>
+        <ion-col size="6" id="derecha">
+          <ion-row id="temperatura">
+            <ion-card-subtitle>Temperatura:</ion-card-subtitle>
+            <ion-card-title>{{ lectura.temperature }}°C</ion-card-title>
+          </ion-row>
+          <ion-row id="humedad">
+            <ion-card-subtitle>Humedad relativa:</ion-card-subtitle>
+            <ion-card-title>{{ lectura.RH }}%</ion-card-title>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-card>
+
+  <!-- <ion-card class="ion-text-center">
     <ion-grid>
       <ion-row>
         <ion-col size="12">
@@ -32,10 +69,10 @@
               <ion-card-subtitle>Ruido:</ion-card-subtitle>
               <img src="../../assets/image/semaforoAmarillo.png">
             </ion-col>
-            <ion-coL id="puerta">
+            <ion-col id="puerta">
               <ion-card-subtitle>Puerta:</ion-card-subtitle>
               <img src="../../assets/image/puertaAbierta.png">
-            </ion-coL>
+            </ion-col>
           </ion-row>
         </ion-col>
         <ion-col size="6" id="derecha">
@@ -50,6 +87,6 @@
         </ion-col>
       </ion-row>
     </ion-grid>
-  </ion-card>
+  </ion-card> -->
 
 </ion-content>

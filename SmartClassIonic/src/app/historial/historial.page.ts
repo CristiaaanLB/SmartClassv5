@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IonRouterOutlet } from '@ionic/angular';
 import { ActivatedRoute } from '@angular/router';
+import { LecturasService } from "../tools/lecturas.service";
 
 @Component({
   selector: 'app-historial',
@@ -11,14 +12,18 @@ export class HistorialPage implements OnInit {
 
   id;
   titulo;
+  lecturas: any = [
 
-  constructor(private routerOutlet: IonRouterOutlet, private route: ActivatedRoute) { }
+  ];
+
+  constructor(private routerOutlet: IonRouterOutlet, private route: ActivatedRoute, private lecturasService: LecturasService) { }
 
   goBack() {
     this.routerOutlet.pop();
   }
 
   ngOnInit() {
+
   }
 
   ionViewWillEnter(){
@@ -27,6 +32,14 @@ export class HistorialPage implements OnInit {
     });
 
     console.log(this.id);
+
+    this.lecturasService.getLecturasByClassroom(this.id).subscribe(
+      res => {
+        console.log(res);
+        this.lecturas = res;
+      }, 
+      err => console.log(err)
+    );
 
     this.titulo = "Historial de "+this.id;
 
