@@ -40,37 +40,12 @@
     </ion-row>
   </ion-grid>
 
-  <!-- <ion-grid>
-    <ion-row>
-      <ion-col size="6">
-        <ion-card id="ruido">
-          <ion-card-header class="ion-text-center">
-            <ion-card-title>Ruido:</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <img src="../../assets/image/semaforoAmarillo.png">
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-      <ion-col size="6">
-        <ion-card id="puerta">
-          <ion-card-header class="ion-text-center">
-            <ion-card-title>Puerta:</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <img src="../../assets/image/puertaAbierta.png">
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-    </ion-row>
-  </ion-grid> -->
-
   <ion-card>
     <ion-card-header class="ion-text-center">
       <ion-card-title>Temperatura:</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      *gráfica*
+      <canvas id="temperatureChart" width="400" height="400"></canvas>
     </ion-card-content>
   </ion-card>
 
@@ -79,7 +54,7 @@
       <ion-card-title>Humedad relativa:</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      *gráfica*
+      <canvas id="humidityChart" width="400" height="400"></canvas>
     </ion-card-content>
   </ion-card>
 
