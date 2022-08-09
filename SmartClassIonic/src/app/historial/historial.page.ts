@@ -33,7 +33,7 @@ export class HistorialPage implements OnInit {
 
     console.log(this.id);
 
-    this.lecturasService.getLecturasByClassroom(this.id).subscribe(
+    this.lecturasService.getHistoryByClassroom(this.id).subscribe(
       res => {
         console.log(res);
         this.lecturas = res;

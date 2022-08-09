@@ -8,7 +8,13 @@ export class LecturasService {
 
   constructor(private http: HttpClient) { }
 
-  getLecturasByClassroom(salon){
+  getHistoryByClassroom(salon){
+    salon = salon.replace(/\s/g, '');
+    console.log("http://localhost:1337/docencia-1-s?_sort=timestamp:DESC&classroom="+salon+"&_limit=50");
+    return this.http.get("http://localhost:1337/docencia-1-s?_sort=timestamp:DESC&classroom="+salon+"&_limit=50");
+  }
+  
+  getLastByClassroom(salon){
     salon = salon.replace(/\s/g, '');
     console.log("http://localhost:1337/docencia-1-s?_sort=timestamp:DESC&classroom="+salon+"&_limit=50");
     return this.http.get("http://localhost:1337/docencia-1-s?_sort=timestamp:DESC&classroom="+salon+"&_limit=50");
